@@ -1,24 +1,19 @@
 import React, { Component } from "react";
+import CardNota from "./CardNota";
 
 class ListaDeNotas extends Component {
+  state = {};
   render() {
     return (
       <ul>
         <li>
-          <section>
-            <header>
-              <h3>Título</h3>
-            </header>
-            <p>Escreva sua nova</p>
-          </section>
+          <CardNota />
         </li>
         <li>
-          <section>
-            <header>
-              <h3>Título</h3>
-            </header>
-            <p>Escreva sua nova</p>
-          </section>
+          <CardNota />
+        </li>
+        <li>
+          <CardNota />
         </li>
       </ul>
     );
