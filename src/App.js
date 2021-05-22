@@ -21,11 +21,8 @@ class App extends Component {
   }
 
   deletarNota(indice) {
-    let listaNota = this.state.notas.filter((nota, index) => {
-      if (index !== indice) {
-        return nota;
-      }
-    });
+    let listaNota = this.state.notas;
+    listaNota.splice(indice, 1);
     this.setState({ notas: listaNota });
   }
 

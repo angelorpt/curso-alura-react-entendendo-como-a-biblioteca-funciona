@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./estilo.css";
-import { ReactComponent as DeleteIcon } from "../../assets/image/delete.svg";
+// import { ReactComponent as DeleteIcon } from "../../assets/img/delete.svg";
 import { FaTimesCircle } from "react-icons/fa";
 
 class CardNota extends Component {
