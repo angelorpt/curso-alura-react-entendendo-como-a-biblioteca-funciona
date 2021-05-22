@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./estilo.css";
 import { ReactComponent as DeleteIcon } from "../../assets/image/delete.svg";
+import { FaTimesCircle } from "react-icons/fa";
 
 class CardNota extends Component {
   _handleDelete(event) {
@@ -14,7 +15,7 @@ class CardNota extends Component {
         <header className="card-nota_cabecalho">
           <h3 className="card-nota_titulo">{this.props.titulo}</h3>
         </header>
-        <DeleteIcon onClick={this._handleDelete.bind(this)} />
+        <FaTimesCircle onClick={this._handleDelete.bind(this)} />
         <p className="card-nota_texto">{this.props.texto}</p>
       </section>
     );
