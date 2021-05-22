@@ -15,18 +15,28 @@ class App extends Component {
 
   criarNota(titulo, texto) {
     const novaNota = { titulo, texto };
-    const novoArrayNotas = [...this.state.notas, novaNota];
-    const novoEstado = {
-      notas: novoArrayNotas,
-    };
-    this.setState(novoEstado);
+    this.setState({
+      notas: [...this.state.notas, novaNota],
+    });
+  }
+
+  deletarNota(indice) {
+    let listaNota = this.state.notas.filter((nota, index) => {
+      if (index !== indice) {
+        return nota;
+      }
+    });
+    this.setState({ notas: listaNota });
   }
 
   render() {
     return (
       <section className="conteudo">
         <FormularioCadastro criarNota={this.criarNota.bind(this)} />
-        <ListaDeNotas notas={this.state.notas} />
+        <ListaDeNotas
+          notas={this.state.notas}
+          deletarNota={this.deletarNota.bind(this)}
+        />
       </section>
     );
   }
